@@ -21,11 +21,6 @@ namespace Lab_1
         {
             InitializeComponent();
         }
-
-        public void name(string name)
-        {
-            this.Text = "Лабораторная работа №1";
-        }
         private void Form1_Load(object sender, EventArgs e)
         {
                 sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["TestDB"].ConnectionString);
@@ -132,6 +127,13 @@ namespace Lab_1
         {
             MessageBox.Show("ВНИМАНИЕ!!! Ввод данных допускаеться в размерах, указанных в задании." +
                 "В случае попытки ввести данные, которые больше по размеру, произойдёт ошибка. Спасибо.");
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 showDate = new Form3();
+            showDate.Show();
         }
     }
 }

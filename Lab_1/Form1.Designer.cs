@@ -628,6 +628,7 @@
             this.button6.TabIndex = 78;
             this.button6.Text = "Поиск";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
