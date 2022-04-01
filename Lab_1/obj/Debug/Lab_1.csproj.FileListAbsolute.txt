@@ -42,4 +42,4 @@ C:\Users\Юлия\source\repos\Lab_1\Lab_1\bin\Debug\System.Text.Json.xml
 C:\Users\Юлия\source\repos\Lab_1\Lab_1\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Юлия\source\repos\Lab_1\Lab_1\bin\Debug\System.ValueTuple.xml
 C:\Users\Юлия\source\repos\Lab_1\Lab_1\obj\Debug\Lab_1.Form2.resources
-C:\Users\Юлия\source\repos\Lab_1\Lab_1\obj\Debug\Lab_1.Form3.resources
+C:\Users\Юлия\source\repos\Lab_1\Lab_1\obj\Debug\Lab_1.Form4.resources

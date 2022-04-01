@@ -32,16 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ACCT_NBR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.database1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.database1DataSet = new Lab_1.Database1DataSet();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
@@ -78,7 +74,17 @@
             this.hOLDINGSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hOLDINGSTableAdapter = new Lab_1.Database1DataSetTableAdapters.HOLDINGSTableAdapter();
             this.iNDUSTRYTableAdapter = new Lab_1.Database1DataSetTableAdapters.INDUSTRYTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ACCT_NBR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aCCTNBRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sYMBOLDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sHARESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pURPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pURDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
@@ -127,44 +133,20 @@
             this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5});
-            this.dataGridView1.DataSource = this.database1DataSetBindingSource;
+            this.Column5,
+            this.idDataGridViewTextBoxColumn1,
+            this.aCCTNBRDataGridViewTextBoxColumn,
+            this.sYMBOLDataGridViewTextBoxColumn1,
+            this.sHARESDataGridViewTextBoxColumn,
+            this.pURPRICEDataGridViewTextBoxColumn,
+            this.pURDATEDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.hOLDINGSBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(767, 324);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // ACCT_NBR
-            // 
-            this.ACCT_NBR.DataPropertyName = "ACCT_NBR";
-            this.ACCT_NBR.HeaderText = "ACCT_NBR";
-            this.ACCT_NBR.Name = "ACCT_NBR";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "SYMBOL";
-            this.Column2.HeaderText = "SYMBOL";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "SHARES";
-            this.Column3.HeaderText = "SHARES";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "PUR_PRICE";
-            this.Column4.HeaderText = "PUR_PRICE";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "PUR_DATE";
-            this.Column5.HeaderText = "PUR_DATE";
-            this.Column5.Name = "Column5";
             // 
             // database1DataSetBindingSource
             // 
@@ -213,6 +195,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(773, 367);
             this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 333);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 31);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Данные";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabPage2
             // 
@@ -490,15 +482,72 @@
             // 
             this.iNDUSTRYTableAdapter.ClearBeforeFill = true;
             // 
-            // button2
+            // Column5
             // 
-            this.button2.Location = new System.Drawing.Point(3, 333);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 31);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Данные";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Column5.DataPropertyName = "PUR_DATE";
+            this.Column5.HeaderText = "PUR_DATE";
+            this.Column5.Name = "Column5";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "PUR_PRICE";
+            this.Column4.HeaderText = "PUR_PRICE";
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "SHARES";
+            this.Column3.HeaderText = "SHARES";
+            this.Column3.Name = "Column3";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "SYMBOL";
+            this.Column2.HeaderText = "SYMBOL";
+            this.Column2.Name = "Column2";
+            // 
+            // ACCT_NBR
+            // 
+            this.ACCT_NBR.DataPropertyName = "ACCT_NBR";
+            this.ACCT_NBR.HeaderText = "ACCT_NBR";
+            this.ACCT_NBR.Name = "ACCT_NBR";
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // aCCTNBRDataGridViewTextBoxColumn
+            // 
+            this.aCCTNBRDataGridViewTextBoxColumn.DataPropertyName = "ACCT_NBR";
+            this.aCCTNBRDataGridViewTextBoxColumn.HeaderText = "ACCT_NBR";
+            this.aCCTNBRDataGridViewTextBoxColumn.Name = "aCCTNBRDataGridViewTextBoxColumn";
+            // 
+            // sYMBOLDataGridViewTextBoxColumn1
+            // 
+            this.sYMBOLDataGridViewTextBoxColumn1.DataPropertyName = "SYMBOL";
+            this.sYMBOLDataGridViewTextBoxColumn1.HeaderText = "SYMBOL";
+            this.sYMBOLDataGridViewTextBoxColumn1.Name = "sYMBOLDataGridViewTextBoxColumn1";
+            // 
+            // sHARESDataGridViewTextBoxColumn
+            // 
+            this.sHARESDataGridViewTextBoxColumn.DataPropertyName = "SHARES";
+            this.sHARESDataGridViewTextBoxColumn.HeaderText = "SHARES";
+            this.sHARESDataGridViewTextBoxColumn.Name = "sHARESDataGridViewTextBoxColumn";
+            // 
+            // pURPRICEDataGridViewTextBoxColumn
+            // 
+            this.pURPRICEDataGridViewTextBoxColumn.DataPropertyName = "PUR_PRICE";
+            this.pURPRICEDataGridViewTextBoxColumn.HeaderText = "PUR_PRICE";
+            this.pURPRICEDataGridViewTextBoxColumn.Name = "pURPRICEDataGridViewTextBoxColumn";
+            // 
+            // pURDATEDataGridViewTextBoxColumn
+            // 
+            this.pURDATEDataGridViewTextBoxColumn.DataPropertyName = "PUR_DATE";
+            this.pURDATEDataGridViewTextBoxColumn.HeaderText = "PUR_DATE";
+            this.pURDATEDataGridViewTextBoxColumn.Name = "pURDATEDataGridViewTextBoxColumn";
             // 
             // Form2
             // 
@@ -539,11 +588,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource database1DataSetBindingSource;
         private Database1DataSet database1DataSet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ACCT_NBR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -584,5 +628,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iNDNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lONGNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ACCT_NBR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aCCTNBRDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sYMBOLDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sHARESDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pURPRICEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pURDATEDataGridViewTextBoxColumn;
     }
 }
